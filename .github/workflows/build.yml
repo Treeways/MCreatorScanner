@@ -36,6 +36,7 @@ jobs:
       - name: Compile application
         run: |
           pyinstaller *.py --onefile
+          tree
           mv dist/main dist/MCreatorScanner
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
