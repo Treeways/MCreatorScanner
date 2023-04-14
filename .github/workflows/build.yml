@@ -34,7 +34,9 @@ jobs:
           # default set of ruff rules with GitHub Annotations
           ruff --format=github --target-version=py37 .
       - name: Compile application
-        run: pyinstaller *.py --onefile
+        run: |
+          pyinstaller *.py --onefile
+          mv dist/main dist/MCreatorScanner
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
