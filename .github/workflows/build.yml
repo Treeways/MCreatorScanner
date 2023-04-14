@@ -37,12 +37,12 @@ jobs:
       - name: Compile application (Windows)
         if: runner.os == 'Windows'
         run: |
-          pyinstaller src/main.py --onefile
+          pyinstaller src/main.py --onefile --icon assets/mcreatorscanner-icon.ico
           mv dist/main.exe dist/MCreatorScanner.exe
       - name: Compile application (macOS, Linux)
         if: runner.os == 'Linux' || runner.os == 'macOS'
         run: |
-          pyinstaller src/main.py --onefile
+          pyinstaller src/main.py --onefile --icon assets/mcreatorscanner-icon.ico
           mv dist/main dist/MCreatorScanner
       
       - name: Upload Artifacts
