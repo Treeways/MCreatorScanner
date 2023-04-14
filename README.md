@@ -2,9 +2,10 @@
 
 <p align="center">
     <img src="https://github.com/Treeway7/MCreatorScanner/blob/master/assets/mcreatorscanner-logo.png" />
+    <p>Scans a Minecraft mod directory for any MCreator mods!</p>
 </p>
 
-Scans a Minecraft mod directory for any MCreator mods!
+<hr>
 
 ## Contributing
 
