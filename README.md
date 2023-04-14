@@ -1,4 +1,4 @@
-<h1 align="center">MCreatorScanner</h1>
+<h1 align="center">MCreator Mod Scanner</h1>
 
 <p align="center">
     <img src="https://github.com/Treeway7/MCreatorScanner/blob/master/assets/mcreatorscanner-logo.png" />
