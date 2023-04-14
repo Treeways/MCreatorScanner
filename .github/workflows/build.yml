@@ -6,7 +6,7 @@ jobs:
     name: Test App and Build Executables
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
         include:
@@ -33,13 +33,20 @@ jobs:
           ruff --format=github --select=E9,F63,F7,F82 --target-version=py37 .
           # default set of ruff rules with GitHub Annotations
           ruff --format=github --target-version=py37 .
-      - name: Compile application
+      
+      - name: Compile application (Windows)
+        if: runner.os == 'Windows'
         run: |
           pyinstaller src/main.py src/scanner.py --onefile
-          tree
           mv dist/main.exe dist/MCreatorScanner.exe
+      - name: Compile application (macOS, Linux)
+        if: runner.os == 'Linux' || runner.os == 'macOS'
+        run: |
+          pyinstaller src/* --onefile
+          mv dist/main dist/MCreatorScanner
+      
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: mcreatorscanner-${{ matrix.target }}
+          name: MCreatorScanner-${{ matrix.target }}
           path: dist/
