@@ -1,6 +1,5 @@
 import os
 import zipfile
-import sys
 
 def scanner(input_path):
     path = input_path + '/'
