@@ -22,7 +22,8 @@ class MCreatorScanner():
         self.frame.grid_rowconfigure(0, weight=1)
         self.frame.grid_rowconfigure(1, weight=1)
 
-        self.button = tk.Button(self.root, text="Select mods/ folder", command=self.get_modpath)
+        self.button = tk.Button(self.root,
+            text="Select mods/ folder", command=self.get_modpath)
         self.button.grid(row=0, column=0, pady=self.padding)
 
         self.label = tk.Label(self.root, text=self.modpath.get())

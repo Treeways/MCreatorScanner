@@ -4,7 +4,8 @@ import sys
 
 def scanner(input_path):
     path = input_path + '/'
-    mods = [name for name in os.listdir(path) if name.endswith('.jar') or name.endswith('.jar.disabled')]
+    mods = [name for name in os.listdir(path)
+        if name.endswith('.jar') or name.endswith('.jar.disabled')]
 
     mcreator_mods = []
     for mod in mods:
@@ -17,8 +18,8 @@ def scanner(input_path):
                 if "mcreator" in filename and not is_mcreator:
                     is_mcreator = True
                     mcreator_mods.append(mod)
-        except:
-            pass
+        except Exception:
+            return f"Failed to read mod {mod} in path\n{path}"
 
     if (not mcreator_mods):
         return "No MCreator mods were found!"
