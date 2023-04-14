@@ -8,6 +8,10 @@
 
 <hr>
 
+## Download
+
+[MCreator Mod Scanner (Windows, macOS, Linux)](https://github.com/Treeway7/MCreatorScanner/releases/latest)
+
 ## Contributing
 
 Issues and pull requests are appreciated!
