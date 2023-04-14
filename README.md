@@ -1,5 +1,6 @@
+<h1 align="center">MCreatorScanner</h1>
+
 <p align="center">
-    <h1>MCreatorScanner</h1>
     <img src="https://github.com/Treeway7/MCreatorScanner/blob/master/assets/mcreatorscanner-logo.png" />
 </p>
 
